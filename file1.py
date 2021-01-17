@@ -37,12 +37,12 @@ print("In integer 136 total quantity of integer 7: ", b)
 # - остаток при делении
 a = int(input("Enter 1st integer: "))
 b = int(input("Enter 2nd integer: "))
-c = int(input("Enter 3rd integer: "))
-print("Slogenie: ", a + b + c)
-print("Vichetanie: ", a - b - c)
-print("Delenie: ", a / b / c)
-print("Umnogenie: ", a * b * c)
-print("Ostatok pri delenii: ", a % b % c)
+z = int(input("Enter 3rd integer: "))
+print("Slogenie: ", a + b + z)
+print("Vichetanie: ", a - b - z)
+print("Delenie: ", a / b / z)
+print("Umnogenie: ", a * b * z)
+print("Ostatok pri delenii: ", a % b % z)
 
 # 7. Создайте три переменных со следующими типами данных:
 # - число
@@ -50,12 +50,24 @@ print("Ostatok pri delenii: ", a % b % c)
 # - число в формате строки
 # Выполните умножение всех трех переменных.
 # Важно: вам потребуется приводить типы данных к одному общему, дабы выполнить это задание.
+a = 56
+b = 2.38
+k = "22"
+print(a * b * k)
 
 # 8. Создайте программу, которая будет определять, является ли десятичная дробь (число с точкой)
 # положительным, отрицательным или имеет нулевое значение.
+num = float(input('Enter float number: '))
+if num > 0:
+    print("Positive number")
+elif num == 0:
+    print('Null')
+else:
+    print('Negative number')
 
 # 9. Напишите программу проверки произвольного символа, введенного пользователем.
 # При вводе числа подтвердите правильность действия. Если введен другой знак (буква, символ), попросите ввести число.
+# ???
 
 # 10. Создайте переменную, в которой будет указан возраст пользователя, соблюдая при
 # этом следующие условия проверки:
@@ -77,20 +89,50 @@ else:
 # "Операция: -"
 # "Второе число: 3"
 # 2 - 3 = -1
+num1 = int(input('Enter your first number: '))
+num2 = int(input('Enter your second number: '))
+operation = input('''
+Please input math operation:
++ addition
+- subtraction
+* multiplication
+/ division
+''')
+if operation == '+':
+    print(num1 + num2)
+elif operation == '-':
+    print(num1 - num2)
+elif operation == '*':
+    print(num1 * num2)
+elif operation == '/':
+    print(num1 / num2)
+else:
+    print('Input math operation above!')
 
 # 12. Создайте программу, которая будет рассчитывать сальдо торгового баланса.
 # В случае положительного сальдо (превышение экспорта над импортом) подсчитывать прибыль,
 # а в случае отрицательного сальдо (превышение импорта над экспортом) рассчитать потери.
 # Числа вводятся пользователем с клавиатуры.
+exp = int(input("Enter sum of export: "))
+imp = int(input("Enter sum of import: "))
+if exp > imp:
+    print("Saldo is positive, count income")
+else:
+    print("Saldo is negative, count expenses")
 
 # 13. Из двух чисел с разной четностью вывести на экран четное число. a, b - данные числа.
-a = 2
-b = 5
+a = int(input('Enter even or odd number: '))
+b = int(input('Enter even or odd number: '))
 if a % 2 == 0:
-    print(a)
+    print("Even nember is: ", a)
 else:
-    print(b)
+    print("Even nember is: ", b)
 
 # 14. Создайте переменную со значением 14.
 # Создайте проверку, которая выведет значение «True» в случае если переменная больше за 10,
 # при этом не равна 12 и при этом меньшая или равная числу 15 или же если переменная равна числу 18.
+x = 14
+if 15 >= x > 10 and x != 12 or x == 18:
+    print("True")
+else:
+    print("False")
