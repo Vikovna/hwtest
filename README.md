@@ -1,5 +1,5 @@
 ## Hi, this is my **Python HW 6**.
-***this code already checked by Aleksanr K.***
+***this code already checked by Aleksandr K.***
 
 ---
 
